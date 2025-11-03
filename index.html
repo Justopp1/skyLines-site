@@ -1,21 +1,117 @@
-index.html
-:root{--navy:#0B1020;--cyan:#00B6D8;--green:#16C47F;--white:#fff}
-*{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--navy);color:#fff}
-.container{max-width:1120px;margin:0 auto;padding:0 16px}
-.header{position:sticky;top:0;background:rgba(11,16,32,.8);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid rgba(255,255,255,.1)}
-.nav{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:12px 0}
-.nav a{color:#cfe7f5;text-decoration:none;font-size:14px} .nav a:hover{color:var(--cyan)}
-.badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:2px 8px;border-radius:8px}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;padding:72px 0}
-h1{font-size:42px;margin:.2em 0} p{color:rgba(255,255,255,.85)} .muted{color:rgba(255,255,255,.6)}
-.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:16px}
-.input{width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);padding:10px 12px;color:#fff;margin:6px 0}
-.btn{display:inline-block;border:none;border-radius:12px;padding:10px 16px;font-weight:700;cursor:pointer;text-decoration:none}
-.btn-cyan{background:var(--cyan);color:var(--navy)} .btn-outline{color:#fff;background:transparent;border:1px solid rgba(255,255,255,.2)}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.section{padding:56px 0;border-top:1px solid rgba(255,255,255,.1)}
-.tile{padding:16px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15)}
-.logo-badge{height:56px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15)}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0;color:rgba(255,255,255,.7);font-size:14px}
-@media(max-width:900px){ .hero{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr} .gallery{grid-template-columns:1fr 1fr}}
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SKYLINES — ES/EN</title>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="background:#00B6D8;width:32px;height:32px;border-radius:10px"></div>
+      <strong>SKYLINES</strong><span class="badge">LATAM-first</span>
+    </div>
+    <nav>
+      <a href="#home">Inicio / Home</a>
+      <a href="#quote">Cotizar / Quote</a>
+      <a href="#solutions">Soluciones / Solutions</a>
+      <a href="#lanes">Rutas / Lanes</a>
+      <a href="#live">Cargas / Live</a>
+      <a href="#magazine">Magazine</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home" class="container hero">
+  <div>
+    <h1 class="es">Carga aérea desde Latinoamérica, sin barreras.</h1>
+    <h1 class="en" style="display:none">Air cargo from Latin America, without barriers.</h1>
+    <p class="es">Cotiza en 30 segundos. IATA o no, estamos contigo. Personas reales detrás de cada operación.</p>
+    <p class="en" style="display:none">Get a quote in 30 seconds. IATA or not, we’ve got you. Real people behind every operation.</p>
+    <div style="display:flex;gap:10px;margin-top:14px">
+      <a class="btn btn-cyan" href="#quote">Solicitar cotización / Get a Quote</a>
+      <a class="btn btn-outline" href="https://wa.me/00000000000" target="_blank">WhatsApp / Chat</a>
+    </div>
+    <div class="muted small" style="margin-top:10px">No-IATA welcome • Reply in minutes • Flexible payments</div>
+  </div>
+
+  <div id="quote" class="card">
+    <div style="font-weight:600;margin-bottom:8px">Cotiza en 30 segundos / Quote in 30 seconds</div>
+    <input class="input" placeholder="Origen / Origin"/>
+    <input class="input" placeholder="Destino / Destination"/>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <input class="input" placeholder="Peso (kg) / Weight (kg)"/>
+      <input class="input" placeholder="Volumen (m³) / Volume (m³)"/>
+    </div>
+    <input class="input" placeholder="Tipo de carga / Cargo type"/>
+    <input class="input" placeholder="Email"/>
+    <button class="btn" style="background:#16C47F;color:#0B1020;margin-top:8px">Enviar / Send</button>
+    <div class="small muted" style="margin-top:6px">SLA: 15–30 min</div>
+  </div>
+</main>
+
+<section id="solutions" class="section">
+  <div class="container">
+    <h2>Soluciones / Solutions</h2>
+    <div class="grid-3" style="margin-top:12px">
+      <div class="tile">Agro</div><div class="tile">Pharma</div><div class="tile">Tech</div>
+    </div>
+  </div>
+</section>
+
+<section id="lanes" class="section">
+  <div class="container">
+    <h2>Rutas / Lanes</h2>
+    <div class="grid-3" style="margin-top:12px">
+      <div class="tile">GRU → FRA</div><div class="tile">MEX → LHR</div><div class="tile">BOG → LIS</div>
+    </div>
+  </div>
+</section>
+
+<section id="partners" class="section">
+  <div class="container">
+    <h2>Partners</h2>
+    <div class="gallery" style="margin-top:12px">
+      <div class="logo-badge"><svg viewBox="0 0 140 20" width="140" height="20"><text x="70" y="14" text-anchor="middle" font-size="14" font-weight="700" fill="#DDE6EE">TAP</text></svg></div>
+      <div class="logo-badge"><svg viewBox="0 0 140 20" width="140" height="20"><text x="70" y="14" text-anchor="middle" font-size="14" font-weight="700" fill="#DDE6EE">SWISS</text></svg></div>
+      <div class="logo-badge"><svg viewBox="0 0 140 20" width="140" height="20"><text x="70" y="14" text-anchor="middle" font-size="14" font-weight="700" fill="#DDE6EE">BRITISH</text></svg></div>
+      <div class="logo-badge"><svg viewBox="0 0 140 20" width="140" height="20"><text x="70" y="14" text-anchor="middle" font-size="14" font-weight="700" fill="#DDE6EE">KLM</text></svg></div>
+      <div class="logo-badge"><svg viewBox="0 0 140 20" width="140" height="20"><text x="70" y="14" text-anchor="middle" font-size="14" font-weight="700" fill="#DDE6EE">AIR FRANCE</text></svg></div>
+      <div class="logo-badge"><svg viewBox="0 0 140 20" width="140" height="20"><text x="70" y="14" text-anchor="middle" font-size="14" font-weight="700" fill="#DDE6EE">LATAM CARGO</text></svg></div>
+    </div>
+    <div class="small muted" style="margin-top:8px">Uso de marcas sujeto a autorización / Brand usage subject to authorization.</div>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <div class="container">
+    <h2>LATAM Airports — Photos</h2>
+    <div class="gallery" style="margin-top:12px">
+      <img class="tile" src="https://source.unsplash.com/featured/?bogota-airport" alt="BOG"/>
+      <img class="tile" src="https://source.unsplash.com/featured/?san-jose-costa-rica%20airport" alt="SJO"/>
+      <img class="tile" src="https://source.unsplash.com/featured/?mexico-city%20airport" alt="MEX"/>
+    </div>
+  </div>
+</section>
+
+<section id="magazine" class="section">
+  <div class="container">
+    <h2>Magazine</h2>
+    <div class="grid-3" style="margin-top:12px">
+      <div class="tile">Perishables checklist to Europe</div>
+      <div class="tile">Volumetric vs actual weight</div>
+      <div class="tile">Pharma 2–8°C ex SJO</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+    <div>SKYLINES — Conecta tu carga aérea sin barreras / Connect your air cargo without barriers</div>
+    <div>ops@skylines.la  •  MGA · MEX · BOG · SCL · LIM</div>
+  </div>
+</footer>
+</body>
+</html>
